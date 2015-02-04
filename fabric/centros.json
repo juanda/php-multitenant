@@ -1,0 +1,62 @@
+{    
+    "centro1": {
+        "nombre": "centro1",
+        "envvars": {
+	    "VIRTUAL_HOST": "centro1.sed.local",
+            "DBHOST": "10.200.16.27",
+            "DBNAME": "moodle_centro1",
+            "DBUSER": "root",
+            "DBPASS": "root",
+            "WWWROOT": "http://centro1.sed.local:8080",
+	    "DATAROOT": "moodledata_centro1"	    
+	}	
+    },
+    "centro2": {
+        "nombre": "centro2",
+        "envvars": {
+	    "VIRTUAL_HOST": "centro2.sed.local",
+            "DBHOST": "10.200.16.27",
+            "DBNAME": "moodle_centro2",
+            "DBUSER": "root",
+            "DBPASS": "root",
+            "WWWROOT": "http://centro2.sed.local:8080",
+	    "DATAROOT": "moodledata_centro2"	    
+	}	
+    },
+    "centro3": {
+        "nombre": "centro3",
+        "envvars": {
+	    "VIRTUAL_HOST": "centro3.sed.local",
+            "DBHOST": "10.200.16.27",
+            "DBNAME": "moodle_centro3",
+            "DBUSER": "root",
+            "DBPASS": "root",
+            "WWWROOT": "http://centro3.sed.local:8080",
+	    "DATAROOT": "moodledata_centro3"	    
+	}	
+    },
+    "centro4": {
+        "nombre": "centro4",
+        "envvars": {
+	    "VIRTUAL_HOST": "centro4.sed.local",
+            "DBHOST": "10.200.16.27",
+            "DBNAME": "moodle_centro4",
+            "DBUSER": "root",
+            "DBPASS": "root",
+            "WWWROOT": "http://centro4.sed.local:8080",
+	    "DATAROOT": "moodledata_centro4"	    
+	}	
+    },
+    "centro5": {
+        "nombre": "centro5",
+        "envvars": {
+	    "VIRTUAL_HOST": "centro5.sed.local",
+            "DBHOST": "10.200.16.27",
+            "DBNAME": "moodle_centro5",
+            "DBUSER": "root",
+            "DBPASS": "root",
+            "WWWROOT": "http://centro5.sed.local:8080",
+	    "DATAROOT": "moodledata_centro5"	    
+	}	
+    }
+}

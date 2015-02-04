@@ -1,0 +1,24 @@
+sudo docker run -d --name fpm -v /home/juanda/Apps/moodleDocker/moodle:/var/www/html juandalibaba/php-fpm
+sudo docker run -d -p 8080:80 -v /var/run/docker.sock:/tmp/docker.sock --name reverse_proxy jwilder/nginx-proxy
+(sudo docker run -d -p 8080:80 --name web --link fpm:fpm juandalibaba/apache)
+
+sudo docker run -d -p :80 --name centro1 --link fpm:fpm \
+-e VIRTUAL_HOST=centro1.sed.local \
+-e DBHOST=10.200.16.27 \
+-e DBNAME=moodle_centro1 \
+-e DBUSER=root \
+-e DBPASS=root \
+-e WWWROOT="http://centro1.sed.local:8080" \
+-e DATAROOT=moodledata_centro1 juandalibaba/apache
+
+
+sudo docker build -t juandalibaba/apache .
+
+
+SetEnv DBHOST 10.200.16.27
+        SetEnv DBNAME moodle_centro1
+        SetEnv DBUSER root
+        SetEnv DBPASS root
+        SetEnv WWWROOT http://localhost:8080
+        SetEnv DATAROOT moodledata_centro1
+
