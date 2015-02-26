@@ -35,17 +35,23 @@ centro_schema = {
 
 
 class Conf:
-    centrosfile = 'centros.json'
+    root_path = '/vagrant/php-multitenant'
+    centrosfile = root_path + '/fabric/centros.json'
+
     db_root_user = 'root'
     db_root_pass = 'root'
-    db_dumpfile = '/home/juanda/Apps/moodleDocker/moodle_resources/moodle.sql'
+    db_dumpfile = root_path + '/moodle_resources/moodle.sql'
+
     moodle_source_dir = '/home/juanda/Apps/moodleDocker/moodle'
     moodle_container_dir = '/var/www/html'
     moodle_config_file = \
         '/home/juanda/Apps/moodleDocker/moodle_resources/config.php'
+
     apache_container_image = 'juandalibaba/apache'
+
     fpm_container_name = 'fpm'
     fpm_image_name = 'juandalibaba/php-fpm'
+
     reverse_proxy_container_name = 'reverse_proxy'
     reverse_proxy_image_name = 'jwilder/nginx-proxy'
     reverse_proxy_port = "8080"
