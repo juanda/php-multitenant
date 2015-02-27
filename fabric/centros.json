@@ -3,7 +3,7 @@
         "nombre": "centro1",
         "envvars": {
 	    "VIRTUAL_HOST": "centro1.sed.local",
-            "DBHOST": "10.200.16.27",
+            "DBHOST": "192.168.33.10",
             "DBNAME": "moodle_centro1",
             "DBUSER": "root",
             "DBPASS": "root",
@@ -15,7 +15,7 @@
         "nombre": "centro2",
         "envvars": {
 	    "VIRTUAL_HOST": "centro2.sed.local",
-            "DBHOST": "10.200.16.27",
+            "DBHOST": "192.168.33.10",
             "DBNAME": "moodle_centro2",
             "DBUSER": "root",
             "DBPASS": "root",
@@ -27,7 +27,7 @@
         "nombre": "centro3",
         "envvars": {
 	    "VIRTUAL_HOST": "centro3.sed.local",
-            "DBHOST": "10.200.16.27",
+            "DBHOST": "192.168.33.10",
             "DBNAME": "moodle_centro3",
             "DBUSER": "root",
             "DBPASS": "root",
@@ -39,7 +39,7 @@
         "nombre": "centro4",
         "envvars": {
 	    "VIRTUAL_HOST": "centro4.sed.local",
-            "DBHOST": "10.200.16.27",
+            "DBHOST": "192.168.33.10",
             "DBNAME": "moodle_centro4",
             "DBUSER": "root",
             "DBPASS": "root",
@@ -51,7 +51,7 @@
         "nombre": "centro5",
         "envvars": {
 	    "VIRTUAL_HOST": "centro5.sed.local",
-            "DBHOST": "10.200.16.27",
+            "DBHOST": "192.168.33.10",
             "DBNAME": "moodle_centro5",
             "DBUSER": "root",
             "DBPASS": "root",
