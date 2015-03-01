@@ -6,7 +6,7 @@ RUN apt-get update && \
 
 RUN apt-get -y install php5 php5-fpm php5-gd \
     php5-sqlite php5-mysqlnd \
-    php5-mcrypt php5-xmlrpc
+    php5-mcrypt php5-xmlrpc php5-curl
 
 RUN sed -i '/daemonize /c \
 daemonize = no' /etc/php5/fpm/php-fpm.conf

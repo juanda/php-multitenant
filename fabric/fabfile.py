@@ -35,7 +35,7 @@ centro_schema = {
 
 
 class Conf:
-    root_path   = '/vagrant/php-multitenant'
+    root_path   = '/vagrant'
     centrosfile = root_path + '/fabric/centros.json'
 
     # Database #
@@ -47,9 +47,10 @@ class Conf:
 
     # Moodle #
     # Ubicación en la máquina anfitrión del código fuente de moodle
-    moodle_source_dir    = root_path + '/moodle'
+    # La ubicamos fuera del directorio /vagrant por cuestiones de performance
+    moodle_source_dir    = '/home/vagrant/moodle'
     # Directorio en el contenedor donde se montará el código fuente de moodle
-    moodle_container_dir = '/var/www/html'
+    moodle_container_dir = '/var/www/moodle'
     # Ubicación en la máquina anfitrión del fichero de configuración de moodle
     moodle_config_file   = \
         root_path + '/moodle_resources/config.php'
@@ -400,4 +401,4 @@ def get_moodle():
     local("rm -rf " + conf.moodle_source_dir)
     local("git clone https://github.com/moodle/moodle.git " + conf.moodle_source_dir)
     local("cd " + conf.moodle_source_dir)
-    local("git checkout MOODLE_28_STABLE")
+    local("git checkout remotes/origin/MOODLE_28_STABLE")

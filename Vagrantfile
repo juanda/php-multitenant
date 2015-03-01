@@ -11,6 +11,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network "private_network", ip: "192.168.33.10"
   
   config.vm.provision "shell",
-    inline: "apt-get update; apt-get -y install curl git fabric python-validictory; curl -sSL https://get.docker.com/ubuntu/ | sudo sh"
+    inline: "apt-get update; apt-get -y install mysql-client curl git fabric python-validictory; curl -sSL https://get.docker.com/ubuntu/ | sudo sh"
 
 end

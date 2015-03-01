@@ -5,8 +5,8 @@
 	    "VIRTUAL_HOST": "centro1.sed.local",
             "DBHOST": "192.168.33.10",
             "DBNAME": "moodle_centro1",
-            "DBUSER": "root",
-            "DBPASS": "root",
+            "DBUSER": "admin",
+            "DBPASS": "admin",
             "WWWROOT": "http://centro1.sed.local:8080",
 	    "DATAROOT": "moodledata_centro1"	    
 	}	
@@ -17,8 +17,8 @@
 	    "VIRTUAL_HOST": "centro2.sed.local",
             "DBHOST": "192.168.33.10",
             "DBNAME": "moodle_centro2",
-            "DBUSER": "root",
-            "DBPASS": "root",
+            "DBUSER": "admin",
+            "DBPASS": "admin",
             "WWWROOT": "http://centro2.sed.local:8080",
 	    "DATAROOT": "moodledata_centro2"	    
 	}	
@@ -29,8 +29,8 @@
 	    "VIRTUAL_HOST": "centro3.sed.local",
             "DBHOST": "192.168.33.10",
             "DBNAME": "moodle_centro3",
-            "DBUSER": "root",
-            "DBPASS": "root",
+            "DBUSER": "admin",
+            "DBPASS": "admin",
             "WWWROOT": "http://centro3.sed.local:8080",
 	    "DATAROOT": "moodledata_centro3"	    
 	}	
@@ -41,8 +41,8 @@
 	    "VIRTUAL_HOST": "centro4.sed.local",
             "DBHOST": "192.168.33.10",
             "DBNAME": "moodle_centro4",
-            "DBUSER": "root",
-            "DBPASS": "root",
+            "DBUSER": "admin",
+            "DBPASS": "admin",
             "WWWROOT": "http://centro4.sed.local:8080",
 	    "DATAROOT": "moodledata_centro4"	    
 	}	
@@ -53,8 +53,8 @@
 	    "VIRTUAL_HOST": "centro5.sed.local",
             "DBHOST": "192.168.33.10",
             "DBNAME": "moodle_centro5",
-            "DBUSER": "root",
-            "DBPASS": "root",
+            "DBUSER": "admin",
+            "DBPASS": "admin",
             "WWWROOT": "http://centro5.sed.local:8080",
 	    "DATAROOT": "moodledata_centro5"	    
 	}	

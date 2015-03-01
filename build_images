@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-sudo docker build -t juandalibaba/php-fpm DockerfilePhpFpm
-sudo docker build -t juandalibaba/apache DockerfileApachePhp

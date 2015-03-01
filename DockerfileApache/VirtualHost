@@ -34,8 +34,8 @@
         SetEnv WWWROOT ${WWWROOT}
         SetEnv DATAROOT ${DATAROOT}
 
-	ProxyPassMatch ^/(.*\.php(/.*)?)$ fcgi://${FPM_IP}:9000/var/www/html/$1
-        ProxyPassMatch ^/(.*(/.*)?)$ fcgi://${FPM_IP}:9000/var/www/html/$1/index.php
+	ProxyPassMatch ^/(.*\.php(/.*)?)$ fcgi://${FPM_IP}:9000/var/www/moodle/$1
+        ProxyPassMatch ^/(.*(/.*)?)$ fcgi://${FPM_IP}:9000/var/www/moodle/$1/index.php
 
         DirectoryIndex /index.php
 </VirtualHost>

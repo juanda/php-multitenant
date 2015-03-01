@@ -15,8 +15,8 @@ ejemplo, su propia base de datos.
 
 Se describe, por tanto, una manera de conseguir la ["tenencia múltiple"][1]
 (multitenancy) de una típica aplicación web  PHP que, en principio, está 
-diseñada para dar servicio a una única organización. Dicha estrategia usa los 
-[linux containers][2] como elemento clave y fundamental. 
+diseñada para dar servicio a una única organización. Dicha estrategia usa  
+[docker][2] como herramienta básica de construcción. 
 
 El sistema propuesto permite añadir/eliminar organizaciones de forma inmediata y automática
 sin que ello afecte al resto de las organizaciones (no hay que reiniciar ningún servicio ni
@@ -31,7 +31,7 @@ El sistema también ofrece una manera inmediata de  medir tiempo que cada organi
 utilizando el sistema, lo que puede interesar de cara a la facturación del servicio.
 
 [1]: http://en.wikipedia.org/wiki/Multitenancy
-[2]: https://linuxcontainers.org
+[2]: https://www.docker.com
 
 ## Descripción del sistema
 
@@ -84,8 +84,7 @@ En él desplegaremos 3 tipos de contenedores:
 ## Descripción a fondo del sistema
 
 En este apartado vamos a describir la implementación concreta que hemos 
-realizado en nuestra prueba de concepto. El código completo puede obtenerse en 
-este [repositorio][4] de GitHub.
+realizado en nuestra prueba de concepto.
 
 [4]: https://github.com/juanda/sed.git
 
@@ -96,7 +95,7 @@ las siguientes características:
 
 * Sistema Operativo: Ubuntu 14.04, kernel 3.13.0-44-generic 
 * Tecnología de gestión de containers: Docker 1.4.1
-* Sistema Gestor de bas de datos: MySQL 5.5.41
+* Sistema Gestor de base de datos: MySQL 5.5.41
 * Sistema de Ficheros para el código PHP: Un directorio de la propia máquina
 * Aplicación PHP: Moodle 2.7
 
@@ -247,12 +246,12 @@ Se ejecuta el container como demonio, se enlaza con el *PHP-FPM* container y se 
 Además, por estar "enlazado" (linked) con el *PHP-FPM container*, este último 
 le inyecta las siguientes variables de entorno.
 
-   FPM_PORT_9000_TCP_ADDR=172.17.0.9
-   FPM_PORT_9000_TCP_PORT=9000
-   FPM_NAME=/centro1/fpm
-   FPM_PORT_9000_TCP_PROTO=tcp
-   FPM_PORT=tcp://172.17.0.9:9000
-   FPM_PORT_9000_TCP=tcp://172.17.0.9:9000
+    FPM_PORT_9000_TCP_ADDR=172.17.0.9
+    FPM_PORT_9000_TCP_PORT=9000
+    FPM_NAME=/centro1/fpm
+    FPM_PORT_9000_TCP_PROTO=tcp
+    FPM_PORT=tcp://172.17.0.9:9000
+    FPM_PORT_9000_TCP=tcp://172.17.0.9:9000
 
 > Nota: Los valores son ejemplos concretos de uno de los apache containers en 
 > nuestra prueba de concepto
@@ -299,7 +298,7 @@ Con el fin de facilitar el despliegue del sistema se ha elaborado un
 - run_reverse_proxy  Ejecuta el contenedor reverse_proxy
 - stop               Para y borra todos los containers que se están ejecutando.
 
-El script utiliza como base de datos un [fichero json][14]) con los datos de las
+El script utiliza como base de datos un [fichero json][14] con los datos de las
 organizaciones que utilizarán la aplicación Moodle
 
 
