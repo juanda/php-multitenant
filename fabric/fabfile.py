@@ -340,6 +340,7 @@ def run_centros():
 @task
 def run():
     """ Ejecuta todos los containers. """
+    run_mysql()
     run_fpm()
     run_reverse_proxy()
     run_centros()
