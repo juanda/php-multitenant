@@ -400,6 +400,4 @@ def get_moodle():
     Descarga el código de moodle y lo coloca en su sitio
     """
     local("rm -rf " + conf.moodle_source_dir)
-    local("git clone https://github.com/moodle/moodle.git " + conf.moodle_source_dir)
-    local("cd " + conf.moodle_source_dir)
-    local("git checkout remotes/origin/MOODLE_28_STABLE")
+    local("git clone --branch v2.8.3 https://github.com/moodle/moodle.git " + conf.moodle_source_dir)
