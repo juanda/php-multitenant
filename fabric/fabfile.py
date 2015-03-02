@@ -3,8 +3,7 @@
 from fabric.api import settings, task, local, hide
 from validictory import validate, validator
 from pprint import pprint
-import json
-import sys
+import json, sys, time
 
 # Esquemas JSON para la validación del fichero de centros
 
@@ -341,6 +340,7 @@ def run_centros():
 def run():
     """ Ejecuta todos los containers. """
     run_mysql()
+    time.sleep(3)
     run_fpm()
     run_reverse_proxy()
     run_centros()
